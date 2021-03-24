@@ -253,7 +253,7 @@ func DidFunctionSucceed(f func() error) bool {
 * Marshalling function parameters to Go values has slightly different functionality.
 
     * If a function parameter is not a concrete type (`interface{}`), Go returns types in the following fashion:
--
+
         |  JS Type  |                  Go Type                  |
         |:---------:|:-----------------------------------------:|
         | undefined |                    nil                    |
@@ -265,7 +265,6 @@ func DidFunctionSucceed(f func() error) bool {
         |   Array   |        [size]interface{} (Go array)       |
         |   Object  |           map[string]interface{}          |
         |  Function | func(...interface{}) (interface{}, error) |
-
 
     * Go pointers will result in the basic value.
 
@@ -347,7 +346,7 @@ if err != nil {
 promise = wasm.PromiseAllSettled(ExpensiveOperation(), AnotherOperation())
 
 // If you want to make sure all are fulfilled and not rejected, you can use.
-promise = wasm.PromiseAll(ExpensiveOperation(), AnotherOperation())
+romise = wasm.PromiseAll(ExpensiveOperation(), AnotherOperation())
 
 // Wait for any of the promises to fulfill. If none of them fulfill and all reject, this promise will also reject.
 promise = wasm.PromiseAny(ExpensiveOperation(), AnotherOperation())
